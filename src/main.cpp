@@ -7,17 +7,17 @@ int main() {
 
   std::cout << "$ ";
   
-   std::string input;
-   std::getline(std::cin, input);
+   
      while (std::getline(std::cin, input) && input.find("exit") != 0)
   {
-    if (input.find("echo "))
+    if (input.find("echo ")==0)
     {
       const int ECHO_LEN = 5; // Including space
       std::string text = input.substr(ECHO_LEN);
       std::cout << text << std::endl;
       
     }
+  }
     std::cout << input << ": command not found\n";
      while(true) {
     std::cout << "$ ";
@@ -30,5 +30,5 @@ int main() {
     std::cout << input << ": command not found" << std::endl;
     
    
-}
+
 }
