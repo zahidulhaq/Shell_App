@@ -22,10 +22,12 @@ int main() {
     }
     else
     {
+      
       std::cout << input << ": command not found" << std::endl;
-      std::cout << "$ ";
+    
     }
   }
+  if(input == "exit 0") return 0;
      while(true) {
     std::cout << "$ ";
     std::string input;
