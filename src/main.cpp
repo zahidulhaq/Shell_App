@@ -1,25 +1,39 @@
 #include <iostream>
-int main()
-{
+
+int main() {
   // Flush after every std::cout / std:cerr
   std::cout << std::unitbuf;
   std::cerr << std::unitbuf;
+
   std::cout << "$ ";
-  std::string input;
-  while (std::getline(std::cin, input) && input.find("exit") != 0) {
-    std::cout << input << ": command not found" << std::endl;
-  while (std::getline(std::cin, input) && input.find("exit") != 0)
+  
+   std::string input;
+   std::getline(std::cin, input);
+     while (std::getline(std::cin, input) && input.find("exit") != 0)
   {
-    if (input.find("echo ") == 0)
+    if (input.find("echo ")==0)
     {
       const int ECHO_LEN = 5; // Including space
       std::string text = input.substr(ECHO_LEN);
       std::cout << text << std::endl;
+      
     }
     else
     {
       std::cout << input << ": command not found" << std::endl;
     }
-    std::cout << "$ ";
   }
-  }}
+    std::cout << input << ": command not found\n";
+     while(true) {
+    std::cout << "$ ";
+    std::string input;
+    std::getline(std::cin, input);
+   
+  }
+    if(input == "exit 0") return 0;
+  
+    std::cout << input << ": command not found" << std::endl;
+    
+   
+
+}
