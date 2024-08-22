@@ -10,7 +10,7 @@ int main() {
    std::string input;
    
     
-    while (std::getline(std::cin, input) && input.find("exit") != 0)
+    while (std::getline(std::cin, input) )
   {
     if (input.find("echo ")==0)
     {
@@ -20,10 +20,14 @@ int main() {
       std::cout << "$ ";
       
     }
+    else if(input.find('exit'==0)){
+      return 0;
+    }
     else
     {
       
       std::cout << input << ": command not found" << std::endl;
+      std:: cout<<"$ ";
     
     }
   }
