@@ -22,6 +22,7 @@ int main() {
       const int ECHO_LEN = 5; // Including space
       std::string text = input.substr(ECHO_LEN);
       std::cout << text << std::endl;
+      continue;
     }
   }
     std::cout << input << ": command not found" << std::endl;
