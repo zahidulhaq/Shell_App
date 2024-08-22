@@ -15,6 +15,18 @@ int main()
       std::string text = input.substr(ECHO_LEN);
       std::cout << text << std::endl;
     }
+    else if(input.find("type ")==0){
+      if(input.substr(0,5) == "type "){
+      
+      std::string cmd = input.substr(5);
+      if(cmd.substr(0,4) == "type" || cmd.substr(0,4) == "exit" || cmd.substr(0,4) == "echo"){
+        std::cout << cmd << " is a shell builtin\n";
+      }else{
+        std::cout << cmd << " not found\n";
+      }
+   }
+
+    }
     else
     {
       std::cout << input << ": command not found" << std::endl;
