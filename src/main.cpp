@@ -8,14 +8,9 @@ int main() {
   std::cout << "$ ";
   
    std::string input;
-   std::getline(std::cin, input);
+   
     
-    std::cout << input << ": command not foundn\n";
-     while(true) {
-    std::cout << "$ ";
-    std::string input;
-    std::getline(std::cin, input);
-     while (std::getline(std::cin, input) && input.find("exit") != 0)
+    while (std::getline(std::cin, input) && input.find("exit") != 0)
   {
     if (input.find("echo ")==0)
     {
@@ -29,6 +24,11 @@ int main() {
       std::cout << input << ": command not found" << std::endl;
     }
   }
+     while(true) {
+    std::cout << "$ ";
+    std::string input;
+    std::getline(std::cin, input);
+     
    
   }
     if(input == "exit 0") return 0;
