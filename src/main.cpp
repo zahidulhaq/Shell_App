@@ -3,6 +3,7 @@
 #include <sstream>
 #include <filesystem>
 using namespace std;
+//masin
 enum validCommands
 {
     echo,
@@ -71,7 +72,7 @@ int main() {
                 }
                 break;
             default:
-            std::cout<<input<<": command not found\n";
+                std::cout<<input<<": command not found\n";
                 break;
         }
     }
