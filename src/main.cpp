@@ -23,6 +23,7 @@ int main() {
       std::string text = input.substr(ECHO_LEN);
       std::cout << text << std::endl;
     }
+  }
     std::cout << input << ": command not found" << std::endl;
     
    
