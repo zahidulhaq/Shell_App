@@ -15,7 +15,7 @@ int main() {
     {
       const int ECHO_LEN = 5; // Including space
       std::string text = input.substr(ECHO_LEN);
-      std::cout << text << std::endl;
+      std::cout << text <<"\n";
       
     }
   }
