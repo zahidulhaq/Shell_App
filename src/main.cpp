@@ -16,7 +16,7 @@ int main() {
     std::getline(std::cin, input);
      while (std::getline(std::cin, input) && input.find("exit") != 0)
   {
-    if (input.find("echo ") == 0)
+    if (input.find("echo "))
     {
       const int ECHO_LEN = 5; // Including space
       std::string text = input.substr(ECHO_LEN);
