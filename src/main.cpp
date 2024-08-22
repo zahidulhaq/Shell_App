@@ -32,11 +32,11 @@ int main() {
     std::getline(std::cin, input);
      
    
-  }
-    if(input == "exit 0") return 0;
   
+    if(input == "exit 0") return 0;
+  //new
     std::cout << input << ": command not found" << std::endl;
-    
+     }
    
 
 }
